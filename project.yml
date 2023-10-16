@@ -1,0 +1,101 @@
+name: CameraApp
+options:
+  deploymentTarget:
+    iOS: "15.0"
+
+packages:
+  SnapKit:
+    url: https://github.com/SnapKit/SnapKit.git
+    from: 5.0.0
+
+configurations:
+  Debug:
+    buildSettings:
+      ENABLE_USER_SCRIPT_SANDBOXING: 'NO'
+  Release:
+    buildSettings:
+      ENABLE_USER_SCRIPT_SANDBOXING: 'NO'
+
+targets:
+  CameraApp:
+    productName: CameraApp
+    settings:
+      PRODUCT_NAME: CameraApp
+    type: application
+    platform: iOS
+    sources:
+      - CameraAppSources/CameraApp
+      - Config
+    configFiles:
+      Debug: Config/debug.xcconfig
+      Release: Config/release.xcconfig
+    dependencies:
+      - package: SnapKit
+    postCompileScripts:
+      - script: Scripts/swiftlint.sh
+        name: Swiftlint
+    postBuildScripts:
+      - path: Scripts/sort_files.sh
+        name: SortFiles
+  CameraAppTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - CameraAppSources/CameraAppTests
+    dependencies:
+      - target: CameraApp
+    buildSettings:
+      INFO_PLIST_FILE: CameraAppSources/CameraAppTests/Info.plist
+    hostApplication: CameraApp
+    options:
+    allowTestingHostApp: true
+  CameraAppUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - CameraAppSources/CameraAppUITests
+    dependencies:
+      - target: CameraApp
+    buildSettings:
+      INFO_PLIST_FILE: CameraAppSources/CameraAppUITests/Info.plist
+    hostApplication: CameraApp
+
+schemes:
+  camera.debug:
+    build:
+      targets:
+        CameraApp: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - CameraAppTests
+    archive:
+      config: Debug
+      
+  camera.release:
+    build:
+      targets:
+        CameraApp: all
+    run:
+      config: Release
+    test:
+      config: Release
+      targets:
+        - CameraAppTests
+    archive:
+      config: Release
+
+  camera.uitests:
+    build:
+      targets:
+        CameraAppUITests: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - CameraAppUITests
+    archive:
+      config: Debug

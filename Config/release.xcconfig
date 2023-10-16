@@ -1,0 +1,3 @@
+#include "base.xcconfig"
+
+PRODUCT_BUNDLE_IDENTIFIER = pl.intexsoft.cameraApp.store
