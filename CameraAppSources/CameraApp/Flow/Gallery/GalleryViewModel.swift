@@ -12,8 +12,12 @@ import UIKit
 class GalleryViewModel: BaseViewModel {
     @Published private(set) var photos = [GalleryImageModel]()
     @Published private(set) var isEditMode = false
-    
 
+    @Published var tags: [TagModel] = []
+    var activeTags = [TagModel]()
+    private let dataStoreManager = DataStoreManager()
+
+    private var isFetchingPhotos = false
     var photoGalleryManager: PhotoGalleryManager?
 
     override func initialize() {
@@ -21,6 +25,7 @@ class GalleryViewModel: BaseViewModel {
         Task {
             await loadPhotos()
         }
+        tags = dataStoreManager.fetchAllTags() ?? []
     }
 
     func showDetail(for indexPath: IndexPath) {
@@ -33,12 +38,33 @@ class GalleryViewModel: BaseViewModel {
         scenesAssembly?.popChildVC()
     }
 
+    func filterPhotosForTag(_ tag: TagModel) {
+        let identifiers = dataStoreManager.fetchImages(withTag: tag)?.compactMap { $0.galleryIdentifier } ?? []
+        Task {
+            await loadPhotoWithIds(identifiers)
+        }
+    }
+
+    func loadPhotoWithIds(_ ids: [String]) async {
+        guard !isFetchingPhotos else { return }
+        isFetchingPhotos = true
+        do {
+            photos = try await photoGalleryManager?.fetchPhotos(withIdentifiers: ids) ?? []
+        } catch {
+            debugPrint("Error loading photos: \(error)")
+        }
+        isFetchingPhotos = false
+    }
+
     func loadPhotos() async {
+        guard !isFetchingPhotos else { return }
+        isFetchingPhotos = true
         do {
             photos = try await photoGalleryManager?.fetchAllPhotos() ?? []
         } catch {
             debugPrint("Error loading photos: \(error)")
         }
+        isFetchingPhotos = false
     }
 
     // MARK: - Photo Selection
@@ -47,7 +73,7 @@ class GalleryViewModel: BaseViewModel {
         if !isEditMode {
             isEditMode = true
         }
-        
+
         photos[index].isSelected.toggle()
     }
 
@@ -55,12 +81,12 @@ class GalleryViewModel: BaseViewModel {
         photos.enumerated().forEach { i, _ in
             photos[i].isSelected = false
         }
-        
+
         isEditMode = false
     }
 
     // MARK: - Photo Deletion
-    
+
     func deleteSelectedPhotos() {
         Task {
             await deleteSelected()

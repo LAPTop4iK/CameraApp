@@ -14,6 +14,5 @@ enum AppConstants {
         static let close = "xmark"
         static let done = "checkmark"
         static let flip = "arrow.triangle.2.circlepath.camera"
-        
     }
 }

@@ -7,13 +7,13 @@
 
 import UIKit
 
-private struct AssociatedKeys {
+private enum AssociatedKeys {
     static var viewModel = 700
 }
 
 protocol ViewModelAssociated where Self: UIViewController {
     associatedtype ViewModelType
-    
+
     var viewModel: ViewModelType? { get set }
 }
 

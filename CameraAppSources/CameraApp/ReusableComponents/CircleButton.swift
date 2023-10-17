@@ -5,8 +5,8 @@
 //  Created by Mikita Laptsionak on 12/10/2023.
 //
 
-import UIKit
 import SnapKit
+import UIKit
 
 enum ButtonShape {
     case circle
@@ -15,9 +15,8 @@ enum ButtonShape {
 }
 
 class CustomButton: UIButton {
-    
     private let buttonShape: ButtonShape
-    
+
     init(
         buttonShape: ButtonShape,
         image: UIImage? = nil,
@@ -27,18 +26,18 @@ class CustomButton: UIButton {
     ) {
         self.buttonShape = buttonShape
         super.init(frame: .zero)
-        
+
         if addBackground {
             backgroundColor = reversedColors ? AppResources.Color.peach : .white
         }
-        
+
         if reversedColors {
             layer.borderWidth = 2
             layer.borderColor = UIColor.white.cgColor
         }
-        
+
         setContentHuggingPriority(.required, for: .horizontal)
-        
+
         if let systemImageName = systemImageName {
             configureSystemImage(systemImageName: systemImageName, reversedColors: reversedColors)
         } else {
@@ -47,14 +46,14 @@ class CustomButton: UIButton {
     }
 
     override init(frame: CGRect) {
-        self.buttonShape = .circle
+        buttonShape = .circle
         super.init(frame: frame)
-        
+
         setupButton()
     }
-    
+
     required init?(coder: NSCoder) {
-        self.buttonShape = .circle
+        buttonShape = .circle
 
         super.init(coder: coder)
         setupButton()
@@ -62,7 +61,7 @@ class CustomButton: UIButton {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        
+
         if buttonShape == .circle {
             layer.cornerRadius = bounds.size.width / 2
         }
@@ -73,14 +72,14 @@ private extension CustomButton {
     func setupButton(image: UIImage? = nil) {
         imageView?.contentMode = .scaleAspectFit
         setImage(image, for: .normal)
-        
+
         if buttonShape != .freeForm {
             snp.makeConstraints { make in
                 make.width.equalTo(snp.height)
             }
         }
     }
-    
+
     private func configureSystemImage(systemImageName: String, reversedColors: Bool) {
         guard let color = reversedColors ? .white : AppResources.Color.peach else { return }
         let configuration = UIImage.SymbolConfiguration(pointSize: 18, weight: .bold)

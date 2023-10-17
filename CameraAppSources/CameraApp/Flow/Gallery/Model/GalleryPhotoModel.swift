@@ -10,7 +10,7 @@ import UIKit
 enum ImageItem {
     case cameraImage(UIImage)
     case galleryImage(GalleryImageModel)
-    
+
     var image: UIImage {
         switch self {
         case let .cameraImage(image):

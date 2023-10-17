@@ -10,7 +10,7 @@ import UIKit
 class ExpandAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
     let duration = 0.4
 
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    func transitionDuration(using _: UIViewControllerContextTransitioning?) -> TimeInterval {
         return duration
     }
 
@@ -46,7 +46,7 @@ class ExpandAnimationController: NSObject, UIViewControllerAnimatedTransitioning
 }
 
 class ExpandTransitionDelegate: NSObject, UINavigationControllerDelegate {
-    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    func navigationController(_: UINavigationController, animationControllerFor _: UINavigationController.Operation, from _: UIViewController, to _: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return ExpandAnimationController()
     }
 }

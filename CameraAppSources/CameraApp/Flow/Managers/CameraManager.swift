@@ -80,7 +80,7 @@ final class CameraManager {
         view.layer.addSublayer(videoPreviewLayer)
         previewLayer = videoPreviewLayer
     }
-    
+
     func updateOrientation() {
         let newVideoOrientation: AVCaptureVideoOrientation
 

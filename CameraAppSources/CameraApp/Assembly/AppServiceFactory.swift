@@ -8,17 +8,15 @@
 import Foundation
 
 final class AppServiceFactory: DependencyFactory {
-
     func coreDataService() -> CoreDataService {
         return shared(CoreDataService())
     }
-    
+
     func cameraManager() -> CameraManager {
         return shared(CameraManager())
     }
-    
+
     func galleryManager() -> PhotoGalleryManager {
         return shared(PhotoGalleryManager())
     }
-
 }

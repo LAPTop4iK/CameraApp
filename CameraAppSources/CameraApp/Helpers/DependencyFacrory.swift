@@ -46,7 +46,7 @@ open class DependencyFactory {
     private var configureStack: [() -> Void] = []
     private var requestDepth = 0
 
-    public init() { }
+    public init() {}
 
     public final func shared<T>(name: String = #function, factory: () -> T, configure: ((T) -> Void)? = nil) -> T {
         return shared(name: name, factory(), configure: configure)
@@ -113,7 +113,7 @@ open class DependencyFactory {
         }
 
         if let configure = configure {
-            configureStack.append({ configure(instance) })
+            configureStack.append { configure(instance) }
         }
 
         if instanceStack.isEmpty {

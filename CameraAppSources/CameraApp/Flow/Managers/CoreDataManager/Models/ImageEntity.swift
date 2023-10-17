@@ -8,13 +8,11 @@
 import CoreData
 
 @objc(ImageEntity)
-public class ImageEntity: NSManagedObject {
+public class ImageEntity: NSManagedObject {}
 
-}
-
-extension ImageEntity {
-    @NSManaged public var galleryIdentifier: String
-    @NSManaged public var tags: NSSet?
+public extension ImageEntity {
+    @NSManaged var galleryIdentifier: String
+    @NSManaged var tags: NSSet?
 }
 
 struct ImageModel {
@@ -24,32 +22,36 @@ struct ImageModel {
 
 extension ImageEntity: ConvertibleEntity {
     typealias ModelType = ImageModel
-    
+
     func toModel() -> ImageModel? {
         guard let tagsSet = tags as? Set<TagEntity> else { return nil }
         let tagNames = tagsSet.compactMap { $0.name }
         return ImageModel(galleryIdentifier: galleryIdentifier, tagNames: tagNames)
     }
-    
+
     func configure(with model: ImageModel) {
-        self.galleryIdentifier = model.galleryIdentifier
+        galleryIdentifier = model.galleryIdentifier
         let tagEntities = model.tagNames.compactMap { tagName -> TagEntity? in
-            let tagEntity = TagEntity(context: self.managedObjectContext!)
+            guard let managedObjectContext = self.managedObjectContext else {
+                return nil
+            }
+            
+            let tagEntity = TagEntity(context: managedObjectContext)
             tagEntity.name = tagName
             return tagEntity
         }
-        self.tags = NSSet(array: tagEntities)
+        tags = NSSet(array: tagEntities)
     }
 }
 
-extension ImageEntity {
-    public func addToTags(_ value: TagEntity) {
-        let items = self.mutableSetValue(forKey: "tags")
+public extension ImageEntity {
+    func addToTags(_ value: TagEntity) {
+        let items = mutableSetValue(forKey: "tags")
         items.add(value)
     }
-    
-    public func removeFromTags(_ value: TagEntity) {
-        let items = self.mutableSetValue(forKey: "tags")
+
+    func removeFromTags(_ value: TagEntity) {
+        let items = mutableSetValue(forKey: "tags")
         items.remove(value)
     }
 }

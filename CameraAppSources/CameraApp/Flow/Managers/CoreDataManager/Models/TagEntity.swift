@@ -1,5 +1,5 @@
 //
-//  TagEntitry.swift
+//  TagEntity.swift
 //  CameraApp
 //
 //  Created by Mikita Laptsionak on 12/10/2023.
@@ -8,13 +8,11 @@
 import CoreData
 
 @objc(TagEntity)
-public class TagEntity: NSManagedObject {
+public class TagEntity: NSManagedObject {}
 
-}
-
-extension TagEntity {
-    @NSManaged public var name: String
-    @NSManaged public var images: NSSet?
+public extension TagEntity {
+    @NSManaged var name: String
+    @NSManaged var images: NSSet?
 }
 
 struct TagModel {
@@ -23,13 +21,12 @@ struct TagModel {
 
 extension TagEntity: ConvertibleEntity {
     typealias ModelType = TagModel
-    
+
     func toModel() -> TagModel? {
         return TagModel(name: name)
     }
-    
+
     func configure(with model: TagModel) {
-        self.name = model.name
+        name = model.name
     }
 }
-

@@ -7,5 +7,4 @@
 
 import Foundation
 
-final class CoreDataService {
-}
+final class CoreDataService {}

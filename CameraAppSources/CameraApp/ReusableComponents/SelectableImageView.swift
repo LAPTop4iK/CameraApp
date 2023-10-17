@@ -14,26 +14,26 @@ class SelectableImageView: UIView {
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
-    
+
     var isSelected: Bool = false {
         didSet {
             updateState()
         }
     }
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
     }
-    
+
     @available(*, unavailable)
-    required init?(coder: NSCoder) {
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
-        
+
         layer.cornerRadius = bounds.size.width / 2
     }
 }
@@ -41,17 +41,17 @@ class SelectableImageView: UIView {
 private extension SelectableImageView {
     func setupView() {
         addSubview(stateImageView)
-        
+
         layer.borderWidth = 4
         layer.borderColor = UIColor.white.cgColor
-        
+
         stateImageView.snp.makeConstraints { make in
             make.center.equalToSuperview()
         }
-        
+
         updateState()
     }
-    
+
     func updateState() {
         if isSelected {
             stateImageView.tintColor = AppResources.Color.red

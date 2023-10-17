@@ -1,5 +1,5 @@
 //
-//  AppResource.swift
+//  AppResources.swift
 //  CameraApp
 //
 //  Created by Mikita Laptsionak on 12/10/2023.
@@ -15,7 +15,7 @@ enum AppResources {
         static let green = UIColor(named: "pine-green")
         static let gray = UIColor(named: "slate-wave")
     }
-    
+
     enum Images {
         static let cancel = UIImage(named: "cancel")
         static let filter = UIImage(named: "filter")

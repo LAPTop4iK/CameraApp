@@ -11,10 +11,10 @@ class AppNavController: UINavigationController {
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .portrait
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setupUI()
     }
 }

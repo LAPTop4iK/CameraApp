@@ -10,7 +10,6 @@ import SnapKit
 import UIKit
 
 class CameraViewController: AppViewController<CameraViewModel> {
-
     private lazy var shutterButton: CustomButton = {
         let button = CustomButton(buttonShape: .circle, image: AppResources.Images.mainPhoto)
         button.addTarget(self, action: #selector(shutterButtonTapped), for: .touchUpInside)
@@ -48,16 +47,16 @@ class CameraViewController: AppViewController<CameraViewModel> {
 
         NotificationCenter.default.addObserver(self, selector: #selector(orientationChanged), name: UIDevice.orientationDidChangeNotification, object: nil)
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         viewModel?.startSession()
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
+
         viewModel?.stopSession()
     }
 
@@ -134,14 +133,14 @@ private extension CameraViewController {
 }
 
 extension CameraViewController: AVCapturePhotoCaptureDelegate {
-    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+    func photoOutput(_: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         if let error = error {
             debugPrint(error.localizedDescription)
             return
         }
 
         guard let imageData = photo.fileDataRepresentation(),
-        let image = UIImage(data: imageData)
+              let image = UIImage(data: imageData)
         else { return }
 
         viewModel?.showPreviewFor(image: image)

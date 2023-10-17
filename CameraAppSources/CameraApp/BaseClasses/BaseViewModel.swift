@@ -26,7 +26,7 @@ enum ViewModelState: Equatable {
             return false
         }
     }
-    
+
     case initial
     case loading
     case refreshing
@@ -36,17 +36,14 @@ enum ViewModelState: Equatable {
 }
 
 class BaseViewModel: NSObject, ObservableObject {
-    
     @Published var state: ViewModelState = .initial
-    
+
     weak var viewModelFactory: AppViewModelFactory?
     weak var coreDataService: CoreDataService?
-    
+
     var scenesAssembly: ScenesAssembly? {
         return viewModelFactory?.scenesAssembly
     }
-    
-    func initialize() {
-        
-    }
+
+    func initialize() {}
 }
