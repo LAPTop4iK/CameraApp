@@ -1,0 +1,894 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		024CD2CB20EF0DF0AA79E16A /* ImageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE987FE7A4E415CEF5A46E /* ImageEntity.swift */; };
+		07E8E10FD9A9676889490BA0 /* TagEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC53FA18B79ABACA5BC8D31 /* TagEntity.swift */; };
+		0EAF622D6CB00342B5A8C51E /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A510FF9543BCA9F9E63DC4A /* AppNavigationController.swift */; };
+		1163F930E56EA9B36631545B /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FAAF6C87C32E441415E27E /* AppViewController.swift */; };
+		12A9A0ADC46753EA5676A137 /* PermissionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDF39C6DFAADD3498A34692 /* PermissionHelper.swift */; };
+		158E48B3E1B8178BCBAA6618 /* UIViewController+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85424BA326F5A546EF1BC70E /* UIViewController+ViewModel.swift */; };
+		226874FAD7B05CF31F0FBD69 /* ScenesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF38890AA0DE85789B5A31AD /* ScenesAssembly.swift */; };
+		227BA658A51168B1B28789E8 /* GalleryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A2F4C1A5AB45CC048B197F /* GalleryViewCell.swift */; };
+		2AA7AF4524B3A213F5755397 /* ExpandAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBDC151AFA076A3964A9099 /* ExpandAnimationController.swift */; };
+		2AFEC58B2CC6A6477CBE4FB1 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6113E13B1BB5278106779117 /* BaseViewModel.swift */; };
+		2DCE4DF0FCC74E258F59B1AA /* AppViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE5A70B8917FFDB9859057C /* AppViewModelFactory.swift */; };
+		37017ED989CD2CD5AF56033A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772914BBC9BCF451CBFD62EF /* AppConstants.swift */; };
+		46D80D6CCCD315832F9054D5 /* TransitioningDelegateSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE533C81FD6676AB3BAF195B /* TransitioningDelegateSourceView.swift */; };
+		4F7CCAD6E01A44FD8027CF9E /* ImagePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFC8E6BAB18E7A60B9102A5 /* ImagePreviewViewController.swift */; };
+		529F6A7B9DC73D57516CD5D3 /* DataStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFC79A6446F556B7081B0BE /* DataStoreManager.swift */; };
+		57AE9A005677AD9514AE10FD /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589E662D9814E633C8441AFC /* CircleButton.swift */; };
+		62583503B25F5C7F13FA79FB /* DependencyFacrory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DB402B22942E54C2BAA165 /* DependencyFacrory.swift */; };
+		64B54E95E267C3E2A51F48C8 /* SelectableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC1C646BCB9A5D4779A21B5 /* SelectableImageView.swift */; };
+		68C235532BF6983633F94A64 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F1897013D2BDEC5245BFAE /* CoreDataService.swift */; };
+		6A0D62019724571E32CAB828 /* UICollectionView+Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E20F35F294C1405145936F /* UICollectionView+Cell.swift */; };
+		72FA6D35872B29B1EB900B60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9DF6997F9301FE420B046AC /* Assets.xcassets */; };
+		7E8A0E40FFBEFEA48DF25A5C /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3C6A9528AACA554779346A /* CameraViewModel.swift */; };
+		7F52CC1259DD0EDBB188E752 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB375A1105A738C114AD6091 /* GalleryViewModel.swift */; };
+		823511456CDC8A1F4039E410 /* TagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FF1B893A34BF48F503FE28 /* TagButton.swift */; };
+		87735AD82CA1FAA0B1642DC7 /* CameraAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F14B1BB7F0AF1F1BA1458 /* CameraAppUITests.swift */; };
+		8EA3698DCB4EB4AE3CBFAC3B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D1F4CD6CAAFE5EB4D19279AA /* SnapKit */; };
+		931DBF052210D8C73A33451C /* BottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163A6AF6223BB1CE96DC765D /* BottomBarView.swift */; };
+		9686426CE9F2DBE4533772B7 /* AppServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD40086631DCC9E26FCA78 /* AppServiceFactory.swift */; };
+		983C0B076A3505FF8501C70A /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5656F1B25E69D119D72456 /* AppAssembly.swift */; };
+		A19E1C912E6EEE5623BCDC5D /* CameraAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3809AC58BA9DD1BD1AB1089 /* CameraAppTests.swift */; };
+		A2EFCF1F713F615DD8CFEDE2 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50CD5B6AC67936728A39DDB /* GalleryViewController.swift */; };
+		A62CBA130787FA011CEB028E /* GalleryPhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67752E7BDD51CD598BADB0A5 /* GalleryPhotoModel.swift */; };
+		B26DFDB2392F4E1F16CB7007 /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217E192B3CB3FD2497B7BE47 /* FiltersView.swift */; };
+		B3108FD391822B028F3BE497 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D80301E595E1631DDFC5C3 /* LaunchScreen.storyboard */; };
+		B40241E5D519C4361030ED38 /* BlocksLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F1748CD6D14E52AFEFD558 /* BlocksLayout.swift */; };
+		BF4E3830738E36153A8B4067 /* CameraAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0637017604D544DE6FB4D5 /* CameraAppUITestsLaunchTests.swift */; };
+		CA0374B2A49F60A8B7EE9BBE /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFB9EC990E0D7F0ED631FDC /* CameraManager.swift */; };
+		CDBD8CFC73594C77D5BE2F5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02A372372CDDBD93E5311B7 /* SceneDelegate.swift */; };
+		CE5C980501053CE33559A823 /* AppResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3368EB88A50B488D4B3978A /* AppResources.swift */; };
+		DA0B33402A2C88C1E3363B71 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E626CB14F09F84BD5224C2 /* CameraViewController.swift */; };
+		DE7A223E3D6FE769D61C2DBA /* PhotoGalleryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56994DCAF425E50A5C4236BA /* PhotoGalleryManager.swift */; };
+		EB521566CD771829665102A3 /* CameraApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D58CDDD5BBE07910F20625B /* CameraApp.xcdatamodeld */; };
+		FDB6AD43D1B4AA992E8485C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B3954B45FB0B2DF624C506 /* AppDelegate.swift */; };
+		FF7DF795AFE727F94F28C3B6 /* ImagePreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD9BA6489E0980B369AD670 /* ImagePreviewViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2829BFE226364DC8A61613A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3925B97E45799E145BF76755 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15B43816304F2E4288F5C461;
+			remoteInfo = CameraApp;
+		};
+		A3BA2CD936B6570FC99CD442 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3925B97E45799E145BF76755 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15B43816304F2E4288F5C461;
+			remoteInfo = CameraApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09740DD5288012F03F69B443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0B5656F1B25E69D119D72456 /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
+		0DFB9EC990E0D7F0ED631FDC /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		12B3954B45FB0B2DF624C506 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		13A2F4C1A5AB45CC048B197F /* GalleryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewCell.swift; sourceTree = "<group>"; };
+		163A6AF6223BB1CE96DC765D /* BottomBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarView.swift; sourceTree = "<group>"; };
+		217E192B3CB3FD2497B7BE47 /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
+		23F1897013D2BDEC5245BFAE /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		41FAAF6C87C32E441415E27E /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
+		44E626CB14F09F84BD5224C2 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		4BC53FA18B79ABACA5BC8D31 /* TagEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagEntity.swift; sourceTree = "<group>"; };
+		4FC1C646BCB9A5D4779A21B5 /* SelectableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableImageView.swift; sourceTree = "<group>"; };
+		56994DCAF425E50A5C4236BA /* PhotoGalleryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryManager.swift; sourceTree = "<group>"; };
+		589E662D9814E633C8441AFC /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		604D6D21EE68106D13268B2C /* CameraApp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CameraApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6113E13B1BB5278106779117 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		67752E7BDD51CD598BADB0A5 /* GalleryPhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPhotoModel.swift; sourceTree = "<group>"; };
+		6A510FF9543BCA9F9E63DC4A /* AppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
+		772914BBC9BCF451CBFD62EF /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		787F14B1BB7F0AF1F1BA1458 /* CameraAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAppUITests.swift; sourceTree = "<group>"; };
+		7EBA41AB7034CCDFD5D38957 /* release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
+		85424BA326F5A546EF1BC70E /* UIViewController+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ViewModel.swift"; sourceTree = "<group>"; };
+		86DB402B22942E54C2BAA165 /* DependencyFacrory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyFacrory.swift; sourceTree = "<group>"; };
+		96FF1B893A34BF48F503FE28 /* TagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButton.swift; sourceTree = "<group>"; };
+		9CD9BA6489E0980B369AD670 /* ImagePreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewViewModel.swift; sourceTree = "<group>"; };
+		9D3C6A9528AACA554779346A /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		9FFC8E6BAB18E7A60B9102A5 /* ImagePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewViewController.swift; sourceTree = "<group>"; };
+		A05E18BA4E43A43D9BF3A980 /* base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = base.xcconfig; sourceTree = "<group>"; };
+		A3809AC58BA9DD1BD1AB1089 /* CameraAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAppTests.swift; sourceTree = "<group>"; };
+		A50CD5B6AC67936728A39DDB /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		A7C8DF7AC26B5279F1AC9E41 /* CameraAppTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = CameraAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9DF6997F9301FE420B046AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB375A1105A738C114AD6091 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
+		ABE5A70B8917FFDB9859057C /* AppViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModelFactory.swift; sourceTree = "<group>"; };
+		AC0637017604D544DE6FB4D5 /* CameraAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ADC8EA6830C59B6611993E26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AEDF39C6DFAADD3498A34692 /* PermissionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionHelper.swift; sourceTree = "<group>"; };
+		AFF57DBFA7C31DAF04B272C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B02A372372CDDBD93E5311B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B3368EB88A50B488D4B3978A /* AppResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppResources.swift; sourceTree = "<group>"; };
+		BBBDC151AFA076A3964A9099 /* ExpandAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandAnimationController.swift; sourceTree = "<group>"; };
+		BFAD40086631DCC9E26FCA78 /* AppServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServiceFactory.swift; sourceTree = "<group>"; };
+		C0D5010CE3FA4B17D9AAC9A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C4DE987FE7A4E415CEF5A46E /* ImageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEntity.swift; sourceTree = "<group>"; };
+		CF38890AA0DE85789B5A31AD /* ScenesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenesAssembly.swift; sourceTree = "<group>"; };
+		DE533C81FD6676AB3BAF195B /* TransitioningDelegateSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitioningDelegateSourceView.swift; sourceTree = "<group>"; };
+		DFFC79A6446F556B7081B0BE /* DataStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreManager.swift; sourceTree = "<group>"; };
+		E0B40359160FF9E930C49F30 /* CameraApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CameraApp.xcdatamodel; sourceTree = "<group>"; };
+		E1E20F35F294C1405145936F /* UICollectionView+Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Cell.swift"; sourceTree = "<group>"; };
+		E9EBFE8F01C6DE0AD1ED98DF /* CameraAppUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = CameraAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9F1748CD6D14E52AFEFD558 /* BlocksLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocksLayout.swift; sourceTree = "<group>"; };
+		FF4DAA42210D0AAA0B698FF9 /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F23640A96B6C9861041C502D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EA3698DCB4EB4AE3CBFAC3B /* SnapKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		057D46C8ED5197DB22D81B4A /* ImagePreview */ = {
+			isa = PBXGroup;
+			children = (
+				9FFC8E6BAB18E7A60B9102A5 /* ImagePreviewViewController.swift */,
+				9CD9BA6489E0980B369AD670 /* ImagePreviewViewModel.swift */,
+			);
+			path = ImagePreview;
+			sourceTree = "<group>";
+		};
+		1D90052C63831C1D6CBB68EB /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				7BAED634A2EEB4267CBA80E5 /* Model */,
+				48689AE610F058D94B815A96 /* UI */,
+				AB375A1105A738C114AD6091 /* GalleryViewModel.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		2EFEF207B4E6A092CC80CD7E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				772914BBC9BCF451CBFD62EF /* AppConstants.swift */,
+				12B3954B45FB0B2DF624C506 /* AppDelegate.swift */,
+				B3368EB88A50B488D4B3978A /* AppResources.swift */,
+				A9DF6997F9301FE420B046AC /* Assets.xcassets */,
+				2D58CDDD5BBE07910F20625B /* CameraApp.xcdatamodeld */,
+				09740DD5288012F03F69B443 /* Info.plist */,
+				E4D80301E595E1631DDFC5C3 /* LaunchScreen.storyboard */,
+				B02A372372CDDBD93E5311B7 /* SceneDelegate.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		35CBA88E178C361BFF4E6EF3 /* CameraApp */ = {
+			isa = PBXGroup;
+			children = (
+				5A7EB7E04BE81DEB1A1377AC /* Assembly */,
+				A172CB89122487D89E22A758 /* BaseClasses */,
+				918BF425EF76365443346D03 /* Extensions */,
+				F197053E79F950FBE47C8CA6 /* Flow */,
+				4E1B579CB3DA41D9E382A390 /* Helpers */,
+				BCE5F40962F1C3EFC0232ADC /* ReusableComponents */,
+				2EFEF207B4E6A092CC80CD7E /* Sources */,
+			);
+			name = CameraApp;
+			path = CameraAppSources/CameraApp;
+			sourceTree = "<group>";
+		};
+		429839806EA1F09DF8D9CCCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				604D6D21EE68106D13268B2C /* CameraApp.app */,
+				A7C8DF7AC26B5279F1AC9E41 /* CameraAppTests.xctest */,
+				E9EBFE8F01C6DE0AD1ED98DF /* CameraAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		45B1905C14FAB62732DF3384 = {
+			isa = PBXGroup;
+			children = (
+				35CBA88E178C361BFF4E6EF3 /* CameraApp */,
+				B2C533B4EF135FC2C19B1C0C /* CameraAppTests */,
+				7B747DF8C311104726CE7626 /* CameraAppUITests */,
+				C53366D3C890597F6603343C /* Config */,
+				429839806EA1F09DF8D9CCCD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		48689AE610F058D94B815A96 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E9F1748CD6D14E52AFEFD558 /* BlocksLayout.swift */,
+				13A2F4C1A5AB45CC048B197F /* GalleryViewCell.swift */,
+				A50CD5B6AC67936728A39DDB /* GalleryViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4E1B579CB3DA41D9E382A390 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				87D712CCC0E7703A4ECE584C /* CustomTransition */,
+				23F1897013D2BDEC5245BFAE /* CoreDataService.swift */,
+				86DB402B22942E54C2BAA165 /* DependencyFacrory.swift */,
+				AEDF39C6DFAADD3498A34692 /* PermissionHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5A7EB7E04BE81DEB1A1377AC /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				0B5656F1B25E69D119D72456 /* AppAssembly.swift */,
+				BFAD40086631DCC9E26FCA78 /* AppServiceFactory.swift */,
+				ABE5A70B8917FFDB9859057C /* AppViewModelFactory.swift */,
+				CF38890AA0DE85789B5A31AD /* ScenesAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		62A9ED20E792F52B69A102E9 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				6C3C11F884E49F5EB5C6CCDD /* CoreDataManager */,
+				0DFB9EC990E0D7F0ED631FDC /* CameraManager.swift */,
+				56994DCAF425E50A5C4236BA /* PhotoGalleryManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		6C3C11F884E49F5EB5C6CCDD /* CoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B376F883D466F8DF8C690D52 /* Models */,
+				DFFC79A6446F556B7081B0BE /* DataStoreManager.swift */,
+			);
+			path = CoreDataManager;
+			sourceTree = "<group>";
+		};
+		7B747DF8C311104726CE7626 /* CameraAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				787F14B1BB7F0AF1F1BA1458 /* CameraAppUITests.swift */,
+				AC0637017604D544DE6FB4D5 /* CameraAppUITestsLaunchTests.swift */,
+				C0D5010CE3FA4B17D9AAC9A4 /* Info.plist */,
+			);
+			name = CameraAppUITests;
+			path = CameraAppSources/CameraAppUITests;
+			sourceTree = "<group>";
+		};
+		7BAED634A2EEB4267CBA80E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				67752E7BDD51CD598BADB0A5 /* GalleryPhotoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		86204CF986F0CFCD1DE83FA3 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				44E626CB14F09F84BD5224C2 /* CameraViewController.swift */,
+				9D3C6A9528AACA554779346A /* CameraViewModel.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		87D712CCC0E7703A4ECE584C /* CustomTransition */ = {
+			isa = PBXGroup;
+			children = (
+				BBBDC151AFA076A3964A9099 /* ExpandAnimationController.swift */,
+				DE533C81FD6676AB3BAF195B /* TransitioningDelegateSourceView.swift */,
+			);
+			path = CustomTransition;
+			sourceTree = "<group>";
+		};
+		918BF425EF76365443346D03 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E1E20F35F294C1405145936F /* UICollectionView+Cell.swift */,
+				85424BA326F5A546EF1BC70E /* UIViewController+ViewModel.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A172CB89122487D89E22A758 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				6A510FF9543BCA9F9E63DC4A /* AppNavigationController.swift */,
+				41FAAF6C87C32E441415E27E /* AppViewController.swift */,
+				6113E13B1BB5278106779117 /* BaseViewModel.swift */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		B2C533B4EF135FC2C19B1C0C /* CameraAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				A3809AC58BA9DD1BD1AB1089 /* CameraAppTests.swift */,
+				AFF57DBFA7C31DAF04B272C7 /* Info.plist */,
+			);
+			name = CameraAppTests;
+			path = CameraAppSources/CameraAppTests;
+			sourceTree = "<group>";
+		};
+		B376F883D466F8DF8C690D52 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C4DE987FE7A4E415CEF5A46E /* ImageEntity.swift */,
+				4BC53FA18B79ABACA5BC8D31 /* TagEntity.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BCE5F40962F1C3EFC0232ADC /* ReusableComponents */ = {
+			isa = PBXGroup;
+			children = (
+				163A6AF6223BB1CE96DC765D /* BottomBarView.swift */,
+				589E662D9814E633C8441AFC /* CircleButton.swift */,
+				217E192B3CB3FD2497B7BE47 /* FiltersView.swift */,
+				4FC1C646BCB9A5D4779A21B5 /* SelectableImageView.swift */,
+				96FF1B893A34BF48F503FE28 /* TagButton.swift */,
+			);
+			path = ReusableComponents;
+			sourceTree = "<group>";
+		};
+		C53366D3C890597F6603343C /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				A05E18BA4E43A43D9BF3A980 /* base.xcconfig */,
+				FF4DAA42210D0AAA0B698FF9 /* debug.xcconfig */,
+				7EBA41AB7034CCDFD5D38957 /* release.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		F197053E79F950FBE47C8CA6 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				86204CF986F0CFCD1DE83FA3 /* Camera */,
+				1D90052C63831C1D6CBB68EB /* Gallery */,
+				057D46C8ED5197DB22D81B4A /* ImagePreview */,
+				62A9ED20E792F52B69A102E9 /* Managers */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15B43816304F2E4288F5C461 /* CameraApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E794EF7B949A0FD2640D24A /* Build configuration list for PBXNativeTarget "CameraApp" */;
+			buildPhases = (
+				FDED6B538D9F02AD9E9D9B05 /* Sources */,
+				CC3AAF8AAF37F3D9B7449E6B /* Swiftlint */,
+				21BF20EC3EEC303ADE362861 /* Resources */,
+				F23640A96B6C9861041C502D /* Frameworks */,
+				83370B2AB4AF2791F8F2A316 /* SortFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CameraApp;
+			packageProductDependencies = (
+				D1F4CD6CAAFE5EB4D19279AA /* SnapKit */,
+			);
+			productName = CameraApp;
+			productReference = 604D6D21EE68106D13268B2C /* CameraApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		62902CDEC4DE050D492EA813 /* CameraAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DCDF0543E92662B1354E34A /* Build configuration list for PBXNativeTarget "CameraAppUITests" */;
+			buildPhases = (
+				1152C63114FE6966FC61328F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				625F3CB20CDB8256B25FF38B /* PBXTargetDependency */,
+			);
+			name = CameraAppUITests;
+			productName = CameraAppUITests;
+			productReference = E9EBFE8F01C6DE0AD1ED98DF /* CameraAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		C8DCFAD066F00C925BF971B5 /* CameraAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D068A5C2C7567EF73A39D62 /* Build configuration list for PBXNativeTarget "CameraAppTests" */;
+			buildPhases = (
+				0595F1946ED7C2410AF6B0CD /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DED11AB57D626D7C6E6050EC /* PBXTargetDependency */,
+			);
+			name = CameraAppTests;
+			productName = CameraAppTests;
+			productReference = A7C8DF7AC26B5279F1AC9E41 /* CameraAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3925B97E45799E145BF76755 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					62902CDEC4DE050D492EA813 = {
+						TestTargetID = 15B43816304F2E4288F5C461;
+					};
+				};
+			};
+			buildConfigurationList = 9BAC30F01511742CCBF7916B /* Build configuration list for PBXProject "CameraApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 45B1905C14FAB62732DF3384;
+			packageReferences = (
+				2C9AC4DC5DB00D6BF67D27FE /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15B43816304F2E4288F5C461 /* CameraApp */,
+				C8DCFAD066F00C925BF971B5 /* CameraAppTests */,
+				62902CDEC4DE050D492EA813 /* CameraAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		21BF20EC3EEC303ADE362861 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72FA6D35872B29B1EB900B60 /* Assets.xcassets in Resources */,
+				B3108FD391822B028F3BE497 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		83370B2AB4AF2791F8F2A316 /* SortFiles */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SortFiles;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n# stop script on any fail\nset -e\n\nPROJECT_PATH=\"$(git rev-parse --show-toplevel)\"\nXCODEPROJ_PATH=$(find \"$PROJECT_PATH\" -maxdepth 1 -type d -name '*.xcodeproj')\n\n$PROJECT_PATH/Addons/sort-Xcode-project-file \"$XCODEPROJ_PATH/project.pbxproj\"\n\n";
+		};
+		CC3AAF8AAF37F3D9B7449E6B /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = Scripts/swiftlint.sh;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0595F1946ED7C2410AF6B0CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A19E1C912E6EEE5623BCDC5D /* CameraAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1152C63114FE6966FC61328F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87735AD82CA1FAA0B1642DC7 /* CameraAppUITests.swift in Sources */,
+				BF4E3830738E36153A8B4067 /* CameraAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDED6B538D9F02AD9E9D9B05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				983C0B076A3505FF8501C70A /* AppAssembly.swift in Sources */,
+				37017ED989CD2CD5AF56033A /* AppConstants.swift in Sources */,
+				FDB6AD43D1B4AA992E8485C2 /* AppDelegate.swift in Sources */,
+				0EAF622D6CB00342B5A8C51E /* AppNavigationController.swift in Sources */,
+				CE5C980501053CE33559A823 /* AppResources.swift in Sources */,
+				9686426CE9F2DBE4533772B7 /* AppServiceFactory.swift in Sources */,
+				1163F930E56EA9B36631545B /* AppViewController.swift in Sources */,
+				2DCE4DF0FCC74E258F59B1AA /* AppViewModelFactory.swift in Sources */,
+				2AFEC58B2CC6A6477CBE4FB1 /* BaseViewModel.swift in Sources */,
+				B40241E5D519C4361030ED38 /* BlocksLayout.swift in Sources */,
+				931DBF052210D8C73A33451C /* BottomBarView.swift in Sources */,
+				EB521566CD771829665102A3 /* CameraApp.xcdatamodeld in Sources */,
+				CA0374B2A49F60A8B7EE9BBE /* CameraManager.swift in Sources */,
+				DA0B33402A2C88C1E3363B71 /* CameraViewController.swift in Sources */,
+				7E8A0E40FFBEFEA48DF25A5C /* CameraViewModel.swift in Sources */,
+				57AE9A005677AD9514AE10FD /* CircleButton.swift in Sources */,
+				68C235532BF6983633F94A64 /* CoreDataService.swift in Sources */,
+				529F6A7B9DC73D57516CD5D3 /* DataStoreManager.swift in Sources */,
+				62583503B25F5C7F13FA79FB /* DependencyFacrory.swift in Sources */,
+				2AA7AF4524B3A213F5755397 /* ExpandAnimationController.swift in Sources */,
+				B26DFDB2392F4E1F16CB7007 /* FiltersView.swift in Sources */,
+				A62CBA130787FA011CEB028E /* GalleryPhotoModel.swift in Sources */,
+				227BA658A51168B1B28789E8 /* GalleryViewCell.swift in Sources */,
+				A2EFCF1F713F615DD8CFEDE2 /* GalleryViewController.swift in Sources */,
+				7F52CC1259DD0EDBB188E752 /* GalleryViewModel.swift in Sources */,
+				024CD2CB20EF0DF0AA79E16A /* ImageEntity.swift in Sources */,
+				4F7CCAD6E01A44FD8027CF9E /* ImagePreviewViewController.swift in Sources */,
+				FF7DF795AFE727F94F28C3B6 /* ImagePreviewViewModel.swift in Sources */,
+				12A9A0ADC46753EA5676A137 /* PermissionHelper.swift in Sources */,
+				DE7A223E3D6FE769D61C2DBA /* PhotoGalleryManager.swift in Sources */,
+				CDBD8CFC73594C77D5BE2F5C /* SceneDelegate.swift in Sources */,
+				226874FAD7B05CF31F0FBD69 /* ScenesAssembly.swift in Sources */,
+				64B54E95E267C3E2A51F48C8 /* SelectableImageView.swift in Sources */,
+				823511456CDC8A1F4039E410 /* TagButton.swift in Sources */,
+				07E8E10FD9A9676889490BA0 /* TagEntity.swift in Sources */,
+				46D80D6CCCD315832F9054D5 /* TransitioningDelegateSourceView.swift in Sources */,
+				6A0D62019724571E32CAB828 /* UICollectionView+Cell.swift in Sources */,
+				158E48B3E1B8178BCBAA6618 /* UIViewController+ViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		625F3CB20CDB8256B25FF38B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15B43816304F2E4288F5C461 /* CameraApp */;
+			targetProxy = 2829BFE226364DC8A61613A3 /* PBXContainerItemProxy */;
+		};
+		DED11AB57D626D7C6E6050EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15B43816304F2E4288F5C461 /* CameraApp */;
+			targetProxy = A3BA2CD936B6570FC99CD442 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E4D80301E595E1631DDFC5C3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADC8EA6830C59B6611993E26 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		263527E2DE382DDA18047D8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EBA41AB7034CCDFD5D38957 /* release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = CameraAppSources/CameraApp/Sources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_NAME = CameraApp;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		298F1E238CF467B57BAEF6A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CameraAppSources/CameraAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CameraApp.app/CameraApp";
+			};
+			name = Debug;
+		};
+		2C6F353EF39369AE13B22B9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF4DAA42210D0AAA0B698FF9 /* debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = CameraAppSources/CameraApp/Sources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_NAME = CameraApp;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BC10FB5F52E8A3F111FD34C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CameraAppSources/CameraAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CameraApp.app/CameraApp";
+			};
+			name = Release;
+		};
+		4C315A5757890007B7A0EB0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5AF8DDE4DCC22EFB559AB614 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CameraAppSources/CameraAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CameraApp;
+			};
+			name = Debug;
+		};
+		85D53374D95660667C3FA02D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CameraAppSources/CameraAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CameraApp;
+			};
+			name = Release;
+		};
+		C745DD76A94D89BC82FB5D31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E794EF7B949A0FD2640D24A /* Build configuration list for PBXNativeTarget "CameraApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C6F353EF39369AE13B22B9B /* Debug */,
+				263527E2DE382DDA18047D8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3DCDF0543E92662B1354E34A /* Build configuration list for PBXNativeTarget "CameraAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AF8DDE4DCC22EFB559AB614 /* Debug */,
+				85D53374D95660667C3FA02D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8D068A5C2C7567EF73A39D62 /* Build configuration list for PBXNativeTarget "CameraAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				298F1E238CF467B57BAEF6A5 /* Debug */,
+				3BC10FB5F52E8A3F111FD34C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9BAC30F01511742CCBF7916B /* Build configuration list for PBXProject "CameraApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C315A5757890007B7A0EB0D /* Debug */,
+				C745DD76A94D89BC82FB5D31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2C9AC4DC5DB00D6BF67D27FE /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D1F4CD6CAAFE5EB4D19279AA /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C9AC4DC5DB00D6BF67D27FE /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		2D58CDDD5BBE07910F20625B /* CameraApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E0B40359160FF9E930C49F30 /* CameraApp.xcdatamodel */,
+			);
+			currentVersion = E0B40359160FF9E930C49F30 /* CameraApp.xcdatamodel */;
+			path = CameraApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3925B97E45799E145BF76755 /* Project object */;
+}
